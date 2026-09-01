@@ -3,15 +3,11 @@ package controllers
 import (
 	"net/http"
 
-	jsoniter "github.com/json-iterator/go"
-
 	"auto-geo-ingestion/internal/core/ports/services"
 	"auto-geo-ingestion/internal/infrastructure/api/dtos"
 	apierrors "auto-geo-ingestion/internal/infrastructure/api/errors"
 	"auto-geo-ingestion/internal/infrastructure/pkg/logger"
 )
-
-var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 // Health is the HTTP controller for health-related endpoints.
 type Health struct {
