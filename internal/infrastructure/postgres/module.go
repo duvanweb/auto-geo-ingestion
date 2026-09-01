@@ -25,6 +25,7 @@ func Module() fx.Option {
 			env.LoadEnv[Configuration],
 			NewConnection,
 			fx.Annotate(pgrepositories.NewVehicleRepository, fx.As(new(portrepos.VehicleRepository))),
+			fx.Annotate(pgrepositories.NewLocationRepository, fx.As(new(portrepos.LocationRepository))),
 		),
 	)
 }
