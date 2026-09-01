@@ -1,7 +1,9 @@
 package postgres
 
 import (
+	portrepos "auto-geo-ingestion/internal/core/ports/repositories"
 	"auto-geo-ingestion/internal/infrastructure/pkg/env"
+	pgrepositories "auto-geo-ingestion/internal/infrastructure/postgres/repositories"
 
 	"go.uber.org/fx"
 )
@@ -22,6 +24,7 @@ func Module() fx.Option {
 		fx.Provide(
 			env.LoadEnv[Configuration],
 			NewConnection,
+			fx.Annotate(pgrepositories.NewVehicleRepository, fx.As(new(portrepos.VehicleRepository))),
 		),
 	)
 }
