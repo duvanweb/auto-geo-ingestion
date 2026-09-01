@@ -1,0 +1,39 @@
+# Binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test output
+*.test
+*.out
+coverage.html
+coverage.txt
+
+# Go build cache
+vendor/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Swagger generated docs
+docs/swagger.json
+docs/swagger.yaml
+docs/docs.go
+
+# Air live-reload
+tmp/
