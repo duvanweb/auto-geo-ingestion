@@ -2,6 +2,7 @@ package main
 
 import (
 	"auto-geo-ingestion/internal/core/health"
+	"auto-geo-ingestion/internal/core/location"
 	"auto-geo-ingestion/internal/core/vehicle"
 	"auto-geo-ingestion/internal/infrastructure/api/router"
 	"auto-geo-ingestion/internal/infrastructure/pkg/logger"
@@ -18,6 +19,7 @@ func Module() fx.Option {
 		postgres.Module(),
 		infraredis.Module(),
 		health.Module,
+		location.Module,
 		vehicle.Module,
 		router.Module(),
 	)
